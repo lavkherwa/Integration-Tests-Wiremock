@@ -26,5 +26,12 @@ public class Demo {
 		return outboundService.callService(serviceURL, "/test");
 
 	}
+	
+	@RequestMapping("testJson")
+	public String callService2() {
+
+		return outboundService.callService(serviceURL, "/testJson");
+
+	}
 
 }

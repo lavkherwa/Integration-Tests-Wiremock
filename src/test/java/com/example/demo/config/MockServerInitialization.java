@@ -16,7 +16,7 @@ import com.example.demo.server.base.MockServer;
 @Profile("test")
 public class MockServerInitialization {
 
-	private static List<MockServer> servers = new ArrayList<>();
+	private static List<MockServer> serverList = new ArrayList<>();
 	
 	private MockServerBeanFactory mockServerBeanFactory;
 
@@ -28,12 +28,12 @@ public class MockServerInitialization {
 	}
 
 	private void addServers() {
-		servers.add(mockServerBeanFactory.getOutboundServiceMockServer());
+		serverList.add(mockServerBeanFactory.getOutboundServiceMockServer());
 	}
 
 	@PostConstruct
 	private void initializeServer() {
-		servers.stream().forEach((server) -> {
+		serverList.stream().forEach((server) -> {
 			server.getInstance().start();
 			server.initStubs(); 
 		});
@@ -42,7 +42,7 @@ public class MockServerInitialization {
 
 	@PreDestroy
 	private void stopServers() {
-		servers.stream().forEach((server) -> {
+		serverList.stream().forEach((server) -> {
 			if(server.getInstance().isRunning())
 			server.getInstance().stop();
 		});
