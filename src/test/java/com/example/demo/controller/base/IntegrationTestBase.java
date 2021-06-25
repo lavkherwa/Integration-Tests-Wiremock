@@ -13,7 +13,7 @@ import org.springframework.test.web.servlet.MockMvc;
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
-public class IntegrationTestBase {
+public abstract class IntegrationTestBase {
 
 	@Autowired
 	private MockMvc mockMvc;
