@@ -1,0 +1,10 @@
+spring:
+  profiles: default
+
+outboundSeviceURL: http://localhost:8081
+
+---
+spring:
+  profiles: test
+  
+outboundSeviceURL: http://localhost:8080
