@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import com.example.demo.config.mockserver.MockServerBeanFactory;
-import com.example.demo.server.MockServer;
+import com.example.demo.server.base.MockServer;
 
 @Component
 @Profile("test")

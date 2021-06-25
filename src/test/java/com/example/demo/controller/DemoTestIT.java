@@ -5,6 +5,8 @@ import org.junit.Test;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
+import com.example.demo.controller.base.IntegrationTestBase;
+
 public class DemoTestIT extends IntegrationTestBase {
 
 	@Test

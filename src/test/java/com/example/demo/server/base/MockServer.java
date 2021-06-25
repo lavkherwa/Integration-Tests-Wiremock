@@ -1,4 +1,4 @@
-package com.example.demo.server;
+package com.example.demo.server.base;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
 

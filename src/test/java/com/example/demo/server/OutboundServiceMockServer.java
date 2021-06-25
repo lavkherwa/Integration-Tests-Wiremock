@@ -3,6 +3,7 @@ package com.example.demo.server;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 
+import com.example.demo.server.base.MockServer;
 import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.client.ResponseDefinitionBuilder;
 import com.github.tomakehurst.wiremock.client.WireMock;

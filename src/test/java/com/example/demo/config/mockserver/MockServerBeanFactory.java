@@ -6,8 +6,8 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
-import com.example.demo.server.MockServer;
 import com.example.demo.server.OutboundServiceMockServer;
+import com.example.demo.server.base.MockServer;
 
 @Component
 @Profile("test")
