@@ -6,11 +6,14 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
+import com.example.demo.config.mockserver.MockServerBeanFactory;
 import com.example.demo.server.MockServer;
 
 @Component
+@Profile("test")
 public class MockServerInitialization {
 
 	private static List<MockServer> servers = new ArrayList<>();

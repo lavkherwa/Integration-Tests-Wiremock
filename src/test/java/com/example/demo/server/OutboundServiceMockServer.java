@@ -2,14 +2,12 @@ package com.example.demo.server;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Component;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.client.ResponseDefinitionBuilder;
 import com.github.tomakehurst.wiremock.client.WireMock;
 import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
 
-@Component
 public class OutboundServiceMockServer implements MockServer {
 
 	private WireMockServer server;
@@ -32,8 +30,7 @@ public class OutboundServiceMockServer implements MockServer {
 	public WireMockServer getInstance() {
 		return server;
 	}
-	
-	
+
 	private void addSimpleStub() {
 		// @formatter:off
 		server.stubFor(WireMock
@@ -45,7 +42,7 @@ public class OutboundServiceMockServer implements MockServer {
 									.withBody("Hello World")));
 		// @formatter:on
 	}
-	
+
 	private void addJsonStub() {
 		// @formatter:off
 		server.stubFor(WireMock

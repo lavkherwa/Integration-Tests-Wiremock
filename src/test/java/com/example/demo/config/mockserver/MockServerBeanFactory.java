@@ -1,14 +1,16 @@
-package com.example.demo.config;
+package com.example.demo.config.mockserver;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import com.example.demo.server.MockServer;
 import com.example.demo.server.OutboundServiceMockServer;
 
 @Component
+@Profile("test")
 public class MockServerBeanFactory implements ApplicationContextAware {
 
 	/** application context: holds reference to the bean factory */
