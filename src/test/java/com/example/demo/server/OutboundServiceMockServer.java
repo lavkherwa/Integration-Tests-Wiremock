@@ -39,6 +39,7 @@ public class OutboundServiceMockServer extends MockServerBase {
 									.withHeader("content-Type", MediaType.APPLICATION_JSON_VALUE)
 									.withBodyFile("test-json.handlebars")
 									.withStatus(HttpStatus.OK.value())
+									.withFixedDelay(1000) // respond after 1 seconds, useful for circuit breaker scenario testing
 									.withTransformers("response-template")));
 		// @formatter:on
 	}
